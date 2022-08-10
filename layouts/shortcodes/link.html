@@ -1,0 +1,15 @@
+<a href='{{ .Get "href" }}'
+        {{ if (.Get "class" ) }} class='{{ .Get "class"}}' {{ end }}
+        {{ if (.Get "role" ) }} role='{{ .Get "role"}}'{{ end }}
+        {{ if (.Get "download" ) }} download='{{ .Get "download"}}'{{ end }}
+>{{ if ( .Get "icon" )}} 
+<div class="icon">
+    <svg viewBox="0 0 32 32">
+        <use xlink:href='#svg-{{ .Get "icon" }}' />
+    </svg>
+</div>{{ end }}
+{{ .Get "label" }}</a>
+
+{{/* <svg viewBox="0 0 32 32">
+    <use xlink:href="#svg-{{ lower .name }}" />
+</svg> */}}

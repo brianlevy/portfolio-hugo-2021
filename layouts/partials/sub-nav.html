@@ -1,0 +1,18 @@
+<nav class="subnav">
+	<ul>
+      {{ $currentNode := . }}
+      {{ $link := $currentNode.Permalink }}
+      {{ range .Site.Menus.sub }}
+      {{ $id := .Name }}     
+      {{if or ($currentNode.IsMenuCurrent "sub" .) ($currentNode.HasMenuCurrent "sub" .) }}
+      <li class="active animated"><span><em>{{ .Name | singularize}}</em> work</span></li> 
+      {{ else }}
+      <li>
+       <a class="{{  lower $id }}" href="{{ .URL }}" >
+            <span>{{ .Name }}</span>
+        </a>  
+      </li>
+      {{ end }}
+      {{ end }}
+    </ul>
+</nav>

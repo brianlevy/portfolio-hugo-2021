@@ -1,0 +1,31 @@
+
+
+{{ define "title" }}
+{{ .Title }} : {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+<h2 class="project-section animated"><span>{{ range .Params.categories }}<a href="/work/{{ . }}" ><em>{{ . }}</em></a>{{ end }}<a href="/work/">Work</a></span></h2>
+{{ $counter := 0 }}
+{{ $offset := 700 }}
+<header class="project-header" {{ if .Params.theme }} style="background-color: {{ .Params.theme }};" {{ end }}>
+    <div class="project-title">
+        <h1>{{ .Title }}</h1>
+        <h2>{{ .Summary }}</h2>
+    </div>
+    <div class="hero">
+        {{ range .Params.hero }}
+        {{ $delay := mul $counter 120 }}
+        <div class="hero-img aos-animate {{ .class }}" {{/* data-aos="zoom-in" data-aos-offset="{{ $offset }}" data-aos-delay="{{ $delay }}" */}}>
+            <img src="/img/projects/{{.image }}" />
+        </div>
+        {{ $counter = add $counter 1 }}
+        {{ end }}
+    </div>
+</header>
+<div class="project-desc">
+{{ .Content }}
+</div>
+{{/* [Work single template] */}}
+
+{{ end }}

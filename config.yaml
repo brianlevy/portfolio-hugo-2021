@@ -1,0 +1,87 @@
+baseURL: https://www.brian-levy.com
+languageCode: en-us
+title: The Design Portfolio of Brian Levy
+params:
+  author: Brian Levy
+  projImgpath: /img/projects/
+  email: hello@brian-levy.com
+  favicon: /img/favicon.ico 
+  social:
+  - name: LinkedIn
+    handle: briandlevy
+    url: https://www.linkedin.com/in/
+  - name: Instagram
+    handle: briandlevy
+    url: https://www.instagram.com/
+  - name: CodePen
+    handle: briandlevy
+    url: https://codepen.io/
+  - name: Twitter
+    handle: briandlevy
+    url: https://www.twitter.com/
+menu:
+  main:
+  - identifier: home
+    name: Hello
+    title: The home page
+    url: /
+    weight: 1
+  - identifier: work
+    name: Work
+    title: The work
+    url: /work/
+    weight: 2
+#  - identifier: blog
+#    name: Blog
+#    title: Weblog
+#    url: /blog/
+#    weight: 3
+  - identifier: about
+    name: About
+    title: About Brian
+    url: /about/
+    weight: 4  
+  sub:
+    - identifier: work
+      name: All
+      url: /work/
+      weight: 1
+    - identifier: ux
+      name: UX
+      url: /work/ux/
+      weight: 2
+    - identifier: print
+      name: Print
+      url: /work/print/
+      weight: 3
+    - identifier: logo
+      name: Logos
+      url: /work/logo/
+      weight: 4
+    - identifier: other
+      name: Other
+      url: /work/other/
+      weight: 5
+
+SectionPagesMenu: main
+
+pluralizelisttitles: false
+
+tags:
+  - concept development
+  - user flows
+  - visual design
+
+related:
+  threshold: 80
+  includeNewer: false
+  toLower: false
+  indices:
+  - name: categories
+    weight: 10
+
+permalinks:
+ categories: /work/:slug/
+
+disableKinds: ["taxonomyTerm",]
+

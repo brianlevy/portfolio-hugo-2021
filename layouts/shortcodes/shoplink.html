@@ -1,0 +1,2 @@
+{{ $shopurl := $.Page.Params.shopurl }}
+<div class="shoplink"><a href='{{ $shopurl }}'>{{ if ( .Get "label") }}  {{ .Get "label" }} {{ else }} Buy one {{ end }}</a></div>

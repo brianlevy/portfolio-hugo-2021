@@ -1,0 +1,14 @@
+<nav class="nav">
+	<ul>
+      {{ $currentNode := . -}}
+      {{ $rellink := $currentNode.RelPermalink -}} {{/* Finds top level directory */}}
+      {{ range .Site.Menus.main -}}
+            {{ $id := .Identifier -}}      
+            <li {{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) (in $rellink $id) }} class="{{ $id }} active" {{ else }} class="{{ $id }}" {{ end }} >
+            <a href="{{ .URL }}" >
+                  <span>{{ .Name }}</span>
+            </a>
+            </li>
+      {{- end }}
+	</ul>
+</nav>

@@ -1,0 +1,19 @@
+<div class="contact">
+	<h4>Get in touch</h4>	
+	<ul class="contact-links alt">
+		<li class="social-icon animated">
+			<a href="mailto:{{ $.Site.Params.email }}" alt="Email" title="Email">
+				<svg viewBox="0 0 32 32">
+					<use xlink:href="#svg-mail" />
+				</svg>
+			</a>
+		</li>{{ range $.Site.Params.social }}
+		<li class="social-icon animated">
+			<a href="{{ .url }}{{ .handle }}" alt="Connect with me on {{ .name | title }}" title="Connect with me on {{ .name | title }}">
+				<svg viewBox="0 0 32 32">
+					<use xlink:href="#svg-{{ lower .name }}" />
+				</svg>
+			</a>
+		</li>{{ end }}
+	</ul>
+</div>

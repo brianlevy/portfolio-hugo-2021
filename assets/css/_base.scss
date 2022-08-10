@@ -1,0 +1,240 @@
+
+/**
+ * Reset some basic elements
+ */
+ html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+h1.altcase {
+    text-transform: none;
+}
+
+/**
+ * Basic styling
+ */
+body {
+    font-family: $sans-font-family;
+    font-size: $base-text-size;
+    line-height: $base-line-height;
+    font-weight: $font-weight-book;
+    color: $text-color;
+    -webkit-text-size-adjust: 100%;
+    padding-top: 0;
+    background-color: $background-color;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+p {
+    font-family: $sans-font-family;
+    font-size: $base-font-size;
+    text-align: left;
+    margin: 0;
+    color: $text-color;
+}
+body.light {
+    background-color: #ffffff;
+    
+}
+section {
+    margin-bottom: 0;
+}
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-base;
+}
+
+em {
+    font-weight: 700;
+    font-style: normal;
+}
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: $small-font-size;
+    text-align: center;
+    h4 {
+        text-transform: uppercase;
+	    letter-spacing: .2em;
+    }
+}
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: .667em;
+    text-align: left;
+    margin-bottom: 12px;
+    font-size: 1.125rem;
+    line-height: 120%;
+    /*padding-left: 1em;*/
+}
+
+
+li {
+    margin-bottom: .75em;
+    &::marker {
+        color: $color-neutral;
+    }
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+dl {
+    font-size: 1.125rem;
+    dt {
+        color: $color-neutral;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: .1em;
+        /* float: left;
+        width: 10%; */
+        &:before {
+            content: "";
+            display: block;
+        }
+    }
+    dd, dt {
+        display: inline;
+    }
+}
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-family: $sans-font-family;
+    font-weight: 900;
+    margin-bottom: .333em;
+    letter-spacing: .05em;
+}
+h1 { font-size: 1.5rem; line-height: 1em; }
+h2 { font-size: 1.25rem; line-height: 1.2em; color: $color-neutral;}
+h3 { font-size: 1.125rem; }
+h4 { font-size: 1rem; }
+
+/**
+ * Links
+ */
+a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:visited {
+        color: $link-color; //darken($link-color, 15%);
+    }
+
+    &:hover {
+        //color: $text-color;
+        text-decoration: underline;
+    }
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    margin-bottom: .5rem;
+    color: $color-neutral;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    
+    p {
+        margin: 0;
+        width: 100%;
+        color: $text-color;
+        line-height: 110%;
+        &::before, &::after {
+            color: darken($grey-color, 7.5%);
+            font-style: normal;
+            font-size: 1.25em;
+        }
+        &::before {
+            content: "\275D";
+            margin-right: .25em;
+        }
+        &::after {
+            content: "\275E";
+            margin-left: .25em;
+        }
+    }
+
+    > :last-child {
+        /*font-style: normal;*/
+        margin-bottom: 0;
+    }
+    & + p {
+        margin-bottom: 1.5rem;
+        color: $color-neutral;
+        font-size: 1rem;
+        line-height: 110%;
+        text-align: center;
+        em {
+            display: block;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+hr {
+    border: 0;
+    height: 4px;
+    width: 100%;
+    margin: 2rem 0;
+    opacity: 0.25;
+    background: url(../img/dot-1.svg) bottom left / 4px repeat-x;
+
+}
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.center {
+    text-align: center;
+}

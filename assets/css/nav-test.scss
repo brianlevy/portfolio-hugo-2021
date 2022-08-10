@@ -1,0 +1,251 @@
+.nav {
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: .2em;
+	/* margin-top: -.5rem; */
+	ul, li, a {
+		display: flex;
+	}
+	ul {
+		margin: 0;
+	}
+	li {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		padding-bottom: 12px;
+		margin: 0 4px;
+		.arrowhead {
+			margin-top: -1px;
+			height: 1.5rem;
+			width: 7.5rem;
+			order: 1;
+			svg {
+				width: 100%;
+				height: 100%;
+				filter: drop-shadow(-2px 4px 0px rgba($color-neutral, 0.18));
+			}
+		}
+		&.active {
+			/* animation: bounceDown ease-in-out .5s; */
+			transform: rotate(7.5deg) scaleY(1);
+			margin: -1rem -.625rem -.625rem;
+			transition-duration: .5s;
+
+			a {
+				height: 6rem;
+				z-index: 1;
+				box-shadow: -4px -1px 0px rgba($color-neutral, 0.18);
+			}			
+			span {
+				font-size: 16px;
+			}
+		}
+		span {
+			display: block;
+			font-size: 14px;
+		}
+		a {
+			background-color: $background-color;
+			color: $color-white;
+			align-items: flex-end;
+			align-content: flex-end;
+			justify-content: center;
+			width: 6rem;
+			height: 6rem;
+			padding-bottom: .5em;
+			box-shadow: -3px 3px 0px rgba($color-neutral, 0.2);
+			&:hover {
+				text-decoration: none;
+			}			
+		}		
+	}
+}
+.nav.alt {
+	li {
+		.arrowhead {
+			display: none;
+			
+		}
+		margin: 0 -6px;
+		mix-blend-mode: multiply;
+		
+		&.active {
+			
+			/* animation-delay: .5s; */
+			margin: 0 -6px;
+			transform: none;
+			a {
+				/* box-shadow: -3px 3px 0px rgba($color-neutral, 0.2); */
+				box-shadow: none;
+				height: 9rem;
+				width: 9rem;
+			} 
+			/*transition-duration: .5s;
+			transition-delay: 2s;*/
+
+			span {
+				/* transform: rotate(-45deg); */
+			};
+
+		}
+		a {
+			width: 6rem;
+			height: 6rem;
+			box-shadow: none;
+			
+			&:hover {
+				/* animation: bounce ease-in-out 1s; */
+			}
+		}
+		@for $i from 1 through 3 {
+			&:nth-child(#{$i}) {
+			  animation-delay: 100ms * $i;
+			}
+		}
+		&.home {
+			&.active {
+				margin-top: 0;
+			}
+			margin-top: .5rem;
+		}
+		&.work {
+			&.active {
+				margin-top: 0;
+			}
+			margin-top: 2rem;
+		}
+		&.about {
+			&.active {
+				margin-top: 0;
+			}
+			margin-top: 1rem;
+		}
+	} 
+}
+
+li.home {
+	a {
+		background-color: $color-blue;
+		height: 6rem;
+	}
+	.arrowhead {fill: $color-blue;}
+}
+li.work {
+	a {
+		background-color: $color-yellow;
+		height: 6rem;
+	}
+	.arrowhead {fill: $color-yellow;}
+}
+li.about {
+	a {
+		background-color: $color-pink;
+		height: 6rem;
+	}
+	.arrowhead {fill: $color-pink;}
+}
+
+.nav.alt-2 {
+	li {
+        /* height: 6rem; */
+        margin: 0 1em;
+        align-items: center;
+        justify-content: center;
+        mix-blend-mode: multiply;
+        padding-bottom: 0;
+		
+		a {
+            display: flex;
+            height: 6rem;
+            align-items: center;
+            position: relative;
+			width: auto;
+            box-shadow: none;
+            background-color: transparent;
+            margin-top: -4px;
+            color:  rgba($color-pink, 0.42);
+            padding-bottom: 8px;
+            font-family: $sans-font-family;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: .3em;
+            opacity: 0.75;
+            border-top: 4px solid transparent;
+            transition-duration: .5s;
+            &::before, &::after {
+                position: absolute;
+                height: 6rem;
+                display: flex;
+                align-items: center;
+                /* top: -4px; */
+                mix-blend-mode: multiply;
+                transition-duration: .5s;
+                /* border-top: 4px solid; */
+            }
+            &::before {
+                color: rgba($color-cyan, 0.71);
+                left: -.1em;
+            }
+            &::after {
+                color: rgba($accent-yellow,0.27);
+                left: .1em;
+            }
+			
+			&:hover {
+                opacity: 1.0;
+                transition-duration: .5s;
+                border-top: 4px solid;
+				&::before, &::after {
+                    
+                    left: 0;
+                    transition-duration: .5s;
+                }
+			}
+        }
+        &.active {
+			transform: none;
+			a {
+                opacity: 1.0;
+                border-top: 4px solid;
+                &::before, &::after {
+                    left: 0;
+                }
+				box-shadow: none;
+				width: auto;
+			} 
+		}
+		&.home {
+            a {
+                &::before, &::after {
+                    content: "hello";
+                }
+            }
+			&.active {
+
+			}
+		}
+		&.work {
+            a {
+                &::before, &::after {
+                    content: "Work";
+                }
+            }
+			&.active {
+
+ 			}
+		}
+		&.about {
+            a {
+                &::before, &::after {
+                    content: "About";
+                }
+            }
+			&.active {
+			
+			}
+			
+		}
+	} 
+}

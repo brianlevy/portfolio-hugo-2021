@@ -1,0 +1,9 @@
+{{ define "main" }}
+{{ partial "sub-nav.html" . }}
+work taxonomy   
+ <section class="grid">
+	 {{ range .Pages.ByWeight }}
+	 	{{ partial "proj-list-item.html" . }}
+	 {{ end }}
+</section>
+{{ end }}

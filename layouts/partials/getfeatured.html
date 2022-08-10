@@ -1,0 +1,14 @@
+
+<ul class="project-list">
+{{ range where .Site.Pages ".Params.featured" true }}
+	{{ partial "proj-list-item.html" . }}
+{{ end }}
+</ul>
+
+<div class="grid-item color-1">
+	<a class="grid-item-content" href="#">
+		<h3>UX | Microsoft Bali</h3>
+		<h4>Making subscriptions easier to manage</h4>
+		<img src="/img/projects/thumb-bali-fpo.png" />
+	</a>
+</div>

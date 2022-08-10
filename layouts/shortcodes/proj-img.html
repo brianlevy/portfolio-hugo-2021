@@ -1,0 +1,22 @@
+<!-- project image -->
+<figure class="project-image hilite">
+    <div class="project-img-wrap">
+    {{ with .Get "link"}}<a href="/img/projects/{{.}}" class="project-img  aos-animate" data-aos="zoom-in" data-aos-offset="240">{{ end }}
+        <img src='/img/projects/{{ .Get "src" }}'
+        {{ if (.Get "id")}} id='{{ .Get "id" }}'{{ end }}
+        {{ if or (.Get "alt") (.Get "caption") }}alt='{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}'{{ end }}/>
+    {{ if .Get "link"}}</a>{{ end }}
+    </div>
+    {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
+    <figcaption>{{ if isset .Params "title" }}
+        <h4>{{ .Get "title" }}</h4>{{ end }}
+        {{ if or (.Get "caption") (.Get "attr")}}<p>
+        {{ .Get "caption" }}
+        {{ with .Get "attrlink"}}<a href="{{.}}"> {{ end }}
+            {{ .Get "attr" }}
+        {{ if .Get "attrlink"}}</a> {{ end }}
+        </p> {{ end }}
+    </figcaption>
+    {{ end }}
+</figure>
+<!-- project image -->

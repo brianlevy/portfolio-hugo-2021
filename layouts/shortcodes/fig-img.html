@@ -1,0 +1,5 @@
+<a href='/img/projects/full-size/{{ .Get "src" }}' class='project-img aos-animate {{ .Get "class" }}' data-aos="zoom-in" {{ if (.Get "offset")}} data-aos-offset='{{ .Get "offset" }}' {{ else }} data-aos-offset=''{{ end }}>
+    <img src='/img/projects/{{ .Get "src" }}'
+    {{ if (.Get "id")}} id='{{ .Get "id" }}'{{ end }}
+    alt='{{ .Get "alt"}}'/>
+</a>

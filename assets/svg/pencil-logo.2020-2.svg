@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 250" style="enable-background:new 0 0 500 250;" xml:space="preserve">
+<g id="body">
+	<g>
+		<path class="logo-body" d="M342.03,116.07H150V0h192.03C374.05,0,400,25.95,400,57.97v0.13C400,90.12,374.05,116.07,342.03,116.07z"/>
+	</g>
+	<path class="logo-body" d="M350.96,249.94H150V133.86h200.96c32.02,0,57.97,25.95,57.97,57.97v0.13
+		C408.93,223.98,382.97,249.94,350.96,249.94z"/>
+</g>
+<polygon id="lead" class="logo-lead" points="500,125 450,75 450,175 "/>
+<path id="eraser" class="logo-eraser" d="M125,250H25c-13.81,0-25-11.19-25-25V25C0,11.19,11.19,0,25,0h100V250z"/>
+<path id="hilite" class="logo-hilite" d="M342.03,116.07H150V0h192.03C374.05,0,400,25.95,400,57.97v0.13
+	C400,90.12,374.05,116.07,342.03,116.07z M408.93,191.96v-0.13c0-32.02-25.95-57.97-57.97-57.97H150v116.07h200.96
+	C382.97,249.94,408.93,223.98,408.93,191.96z M500,125l-50-50v100L500,125z M125,0H25C11.19,0,0,11.19,0,25v200
+	c0,13.81,11.19,25,25,25h100V0z"/>
+</svg>

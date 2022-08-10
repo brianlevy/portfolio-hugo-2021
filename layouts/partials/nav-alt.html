@@ -1,0 +1,23 @@
+<nav class="nav alt-3">
+	<ul>
+      {{ $currentNode := . -}}
+      {{ $rellink := $currentNode.RelPermalink -}} {{/* Finds top level directory */}}
+      {{ range .Site.Menus.main -}}
+        {{ $id := .Identifier -}}
+        {{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) (in $rellink $id) }}
+            <li class="{{ $id }} active animated">
+                <a href="{{ .URL }}" >
+                    {{ .Name }}
+                </a>
+            </li>
+        {{ else }}
+            <li class="{{ $id }} animated">
+                <a href="{{ .URL }}">
+                    {{ .Name }}
+                </a>
+            </li>
+        {{ end }} 
+      
+      {{- end }}
+	</ul>
+</nav>

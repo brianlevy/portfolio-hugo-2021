@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 250" style="enable-background:new 0 0 500 250;" xml:space="preserve">
+<path id="lead" class="logo-lead" d="M500,125l-62.6-62.6c0,0,15,25.6,15,62.6c0,39.4-15,62.6-15,62.6L500,125z"/>
+<g id="body">
+	<g>
+		<path class="logo-body" d="M342,116.1H150V0h192c32,0,58,26,58,58v0.1C400,90.1,374,116.1,342,116.1z"/>
+	</g>
+	<path class="logo-body" d="M351,249.9H150V133.9h201c32,0,58,25.9,58,58v0.1C408.9,224,383,249.9,351,249.9z"/>
+</g>
+<path id="eraser" class="logo-eraser" d="M125,250H25c-13.8,0-25-11.2-25-25V25C0,11.2,11.2,0,25,0h100V250z"/>
+<path id="hilite" class="logo-hilite" d="M342,116.1H150V0h192c32,0,58,26,58,58v0.1C400,90.1,374,116.1,342,116.1z M408.9,192v-0.1c0-32-26-58-58-58
+	H150v116.1h201C383,249.9,408.9,224,408.9,192z M125,0H25C11.2,0,0,11.2,0,25v200c0,13.8,11.2,25,25,25h100V0z M500,125l-62.6-62.6
+	c0,0,15,25.6,15,62.6c0,39.4-15,62.6-15,62.6L500,125z"/>
+</svg>

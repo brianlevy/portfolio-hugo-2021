@@ -1,0 +1,10 @@
+{{ define "main" }}
+<h1>All {{ .Page.Title }} posts</h1>
+{{ partial "tag-nav.html" . }}
+tags taxonomy    
+ <section class="grid">
+	 {{ range .Pages.ByWeight }}
+	 	{{ partial "proj-list-item.html" . }}
+	 {{ end }}
+</section>
+{{ end }}

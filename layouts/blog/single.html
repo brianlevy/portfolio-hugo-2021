@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+<div class="project-desc">
+Blog template
+{{ .Content }}		
+
+</div>
+<section class="tags">
+Filed under:
+    <ul>
+        {{ range (.GetTerms "tags") }}
+            <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        {{ end }}
+    </ul>
+</section>
+
+{{ end }}

@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{/* <h1 class="intro-text"><em class="section-title animated work"><a href="/work/">Work</a></em></h1> */}}
+{{/* <h1 class="project-section animated"><span class="category">{{ range .Params.categories }}<a href="/work/{{ . }}" >{{ . }} </a>{{ end }}</span><em><a href="/work/">Work</a></em></h1> */}}
+{{ partial "sub-nav.html" . }}
+{{/* default taxonomy */}}    
+ <section class="grid">
+	 {{ range .Pages.ByWeight }}
+	 	{{ partial "proj-list-item.html" . }}
+	 {{ end }}
+</section>
+{{ end }}

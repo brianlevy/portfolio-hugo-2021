@@ -1,0 +1,22 @@
+
+{{ define "main" }}
+	<h1 class="intro home">
+		<em class="section-title animated home"><a href="">{{ .Title }},</a></em>
+		<span class="intro-text">
+			my name is Brian, and I&rsquo;m 
+			<span id="rotating-text"> a <em>designer</em>; a <em>problem solver</em>; a <em>builder</em>; a <em>tinkerer</em>; a <em>screen printer</em>; a <em>collaborator</em>; <em>curious</em>; <em>available to work</em>; a <em>skateboarder</em>; a <em>creative thinker</em>; an <em>accomplice</em>; a <em>craftsman</em>; a <em>pixel worker</em>; <em>teachable</em>; a <em>guitar player</em>; an <em>ink enthusiast</em>; a <em>learner</em>; a <em>listener</em>; an <em>observer</em>; <em>detail oriented</em>; an <em>introvert</em>; a <em>student of life</em>; a <em>rule breaker</em>; a <em>surfer</em>; a <em>contrarian</em>; a <em>recovering perfectionist</em>; a <em>rock &lsquo;n&rsquo; roll aficionado</em>; a <em>nonconformist</em>; a <em>do-it-yourselfer</em>; a <em>jack of all trades, master of none</em></span>
+		</span>
+	</h1>
+	<h2 class="recent">Recent-<span>ish</span> work</h2>
+	<i class="icon long blue">
+		<svg viewBox="0 0 32 64">
+			<use xlink:href="#svg-arrow-dot-dn-long" />
+		</svg>
+	</i>
+	<div class="grid home-content">
+		{{ range where .Site.Pages ".Params.featured" true }}
+			{{ partial "proj-list-item.html" . }}
+		{{ end }}
+	</div>
+	<a href="/work" class="round aos-animate" data-aos="zoom-in" data-aos-offset="120">More <em>work</em></a>
+{{ end }}

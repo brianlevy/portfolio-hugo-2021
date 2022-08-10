@@ -1,0 +1,6 @@
+{{- $src := .Get "src" -}}
+<div class='{{.Get "class"}}'>
+    <a href='/img/projects/full-size/{{ .Get "src" }}'>
+        <img src='/img/projects/{{ .Get "src" }}' alt='{{ .Get "alt"}}' />
+    </a>
+</div>

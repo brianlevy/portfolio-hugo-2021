@@ -1,0 +1,10 @@
+{{ define "main"}}
+{{/*<h1>All Work</h1>*/}}
+{{ partial "sub-nav.html" . }}
+<section class="grid">
+Blog list template
+	 {{ range .Pages }}
+	 	{{ partial "proj-list-item.html" . }}
+	 {{ end }}
+</section>
+{{end}}

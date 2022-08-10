@@ -1,0 +1,28 @@
+<nav class="nav alt">
+	<ul>
+      {{ $currentNode := . -}}
+      {{ $rellink := $currentNode.RelPermalink -}} {{/* Finds top level directory */}}
+      {{ range .Site.Menus.main -}}
+        {{ $id := .Identifier -}}
+        {{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) (in $rellink $id) }}
+            <li class="{{ $id }} active">      
+                <a href="{{ .URL }}" >
+                    <span>{{ .Name }}</span>
+                </a>
+                <div class="arrowhead">
+                    <svg preserveAspectRatio="none" viewBox="0 0 100 20">
+                        <use xlink:href="#svg-arrow-d" />
+                    </svg>
+                </div>
+            </li>
+        {{ else }}
+            <li class="{{ $id }}">
+                <a href="{{ .URL }}">
+                    <span>{{ .Name }}</span>
+                </a>
+            </li>
+        {{ end }} 
+      
+      {{- end }}
+	</ul>
+</nav>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <title>
+      {{ block "title" . }}
+        {{ .Site.Title }}
+      {{ end }}
+  </title>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "svg-gradients.svg" . }}
+  {{ partial "svg-defs.svg" . }}
+  <div class="wrap">
+    <div class="inner-wrap">
+    {{ partial "header.html" . }}
+    <section class="content{{ if .Section }} {{ .Section }}-section{{ end }} {{ range .Params.categories }}{{ . }}-section{{ end }}">
+    {{ block "main" . }}
+    {{ end }}
+    </section>
+    </div>
+  </div>
+  {{ partial "footer.html" . }} 
+  {{ partial "scripts.html" . }}
+</body>
+</html>

@@ -1,0 +1,48 @@
+{{/*  {{ $cat := .Params.categories }}
+<li>
+	<a class="post-link animated" href="{{ .Permalink }}">
+		<div class="title">
+			<h2>{{ .LinkTitle }}</h2>
+			<p class="cat"> {{ if .Params.category_name }} {{ .Params.category_name }} {{ else }} {{ range .Params.categories }} {{ . }} {{ end }} {{ end }}</p>
+		</div>
+		<div  class="thumb{{ if (in $cat "logos") }} logo-thumb {{ end }}">
+			<img src="/img/projects/{{ .Params.thumb }}" />
+		</div>
+	</a>
+</li>*/}}
+
+
+{{/* <div class="grid-item" style="background-color: #{{ .Params.theme }};">
+	<a class="grid-item-content {{ .Params.orientation }}" href="{{ .Permalink }}">
+		<div class="grid-item-title">
+			<h3>{{ range .Params.categories }} {{ . }} {{ end }}| {{ .LinkTitle }}</h3>
+			<h4>{{ .Summary }}</h4>
+		</div>
+		<div class="grid-item-img-wrap">
+			<div class="grid-item-img aos-animate {{ range .Params.categories }} {{ . }}{{ end }}-img" data-aos="zoom-in" data-aos-offset="240">
+				<img src="/img/projects/{{ .Params.thumb }}" />
+			</div>
+		</div>
+	</a>
+</div> */}}
+{{ $counter := 0 }}
+{{ $offset := 240 }}
+
+<div class="grid-item {{ .Params.orientation }}" {{ if .Params.theme }} style="background-color: {{ .Params.theme }};" {{ end }}>
+	<a class="grid-item-content" href="{{ .Permalink }}">
+		<div class="grid-item-title" data-aos="fade" data-aos-offset="120" data-aos-duration="1000">
+			<h4 class="item-category">{{ range .Params.categories }} {{ . }} {{ end }}</h3>
+			<h2>{{ .LinkTitle }}</h2>
+			<h3>{{ .Summary }}</h4>
+		</div>
+		<div class="grid-item-img-wrap">			
+			{{ range .Params.thumbs }}
+			{{ $delay := mul $counter 120 }}
+			<div class="grid-item-img aos-animate {{ .class }} {{ range $.Params.categories }} {{ . }}{{ end }}-img" data-aos="zoom-in" data-aos-offset="{{ add $offset $delay }}">
+				<img src="/img/projects/{{.image }}" />
+			</div>
+			{{ $counter = add $counter 1 }}
+			{{ end }}
+		</div>
+	</a>
+</div>
