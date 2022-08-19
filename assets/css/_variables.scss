@@ -1,59 +1,42 @@
 $base-font-family:    "futura-pt", Helvetica, Arial, sans-serif;
 
-$display-font-family:   "futura-pt-condensed", Helvetica, Arial, sans-serif; /* font-weight: 800 */
-$sans-bold-font-family: "eurostile", "futura-pt-bold", Helvetica, Arial, sans-serif; /* font-weight: 700 */
-$sans-font-family:	    "eurostile", "futura-pt", Helvetica, Arial, sans-serif; /* book = 400, extra bold = 800*/
-$serif-font-family:     "ff-ernestine-pro", "clarendon-urw", Georgia, Times, serif;
+$display-font-family:	"futura-pt-condensed", Helvetica, Arial, sans-serif; /* font-weight: 800 */
+$sans-bold-font-family:	"eurostile", "futura-pt-bold", Helvetica, Arial, sans-serif; /* font-weight: 700 */
+$sans-font-family:		"eurostile", "futura-pt", Helvetica, Arial, sans-serif; /* book = 400, extra bold = 800*/
+$serif-font-family:		"ff-ernestine-pro", "clarendon-urw", Georgia, Times, serif;
 $logo-type-font:        "futura-pt", Helvetica, Arial, sans-serif;
 $monospace-font:        "Courier New", Courier, monospace;
 
-$font-weight-book: 			400;
-$font-weight-bold:			700;
-$font-weight-xtra-bold:		800;
+$font-weight-book:		400;
+$font-weight-bold:		700;
+$font-weight-xtra-bold:	800;
 
-$base-font-size:   18px;
-$base-text-size:   $base-font-size * 0.888888888888889;
-$small-font-size:  $base-font-size * 0.75;
-$base-line-height: 1.5;
+$base-font-size:		18px;
+$base-text-size:		$base-font-size * 0.888888888888889;
+$small-font-size:		$base-font-size * 0.75;
+$base-line-height:		1.5;
 
-$spacing-unit:     20px;
-$spacing-base:     12px;
-$spacing-sm:       8px;
-$spacing-lg:       20px;
-$padding-base:     10px;
-$padding-lg:       20px;
+$spacing-unit:			20px;
+$spacing-base:			12px;
+$spacing-sm:			8px;
+$spacing-lg:			20px;
+$padding-base:			10px;
+$padding-lg:			20px;
 
-$text-color:       #3c3642;
-$background-color: #f6f1ee;
-$link-color: 	   #4c728f;//#157aa2;  //--#B05802;
-$color-white:      #ffffff;
+$text-color:			#3c3642;
+$background-color:		#f6f1ee;
+$link-color:			#4c728f;
+$color-white:			#ffffff;
 
-$color-yellow:     #fba824;//#fccb75;//#f8c94f;
-$color-red:       #fc5b13;//#eb5e29;
-$color-blue:       #4c728f;//#abc5cf;
-$color-neutral:    #76706a;
-$color-neutral-dark: #506C7C;
+$color-yellow:			#fba824;
+$color-red:				#fc5b13;
+$color-blue:			#4c728f;
+$color-neutral:			#76706a;
+$color-neutral-dark:	#506C7C;
 
-$grey-color:       #f6f1ee;//#ecf0f1;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-
-$on-palm-min:      499px;
-$on-palm-max:      499px;
-
-$on-laptop-min:    500px;
-$on-laptop-max:    1023px;
-
-$on-desktop-min:   1024px;
-
-
-$on-palm: 		   480px;
-$on-laptop:        640px;
-$on-desktop:       1024px;
+$grey-color:			#f6f1ee;//#ecf0f1;
+$grey-color-light:		lighten($grey-color, 40%);
+$grey-color-dark:		darken($grey-color, 25%);
 
 /* CSS custom properties */
 :root {
@@ -227,19 +210,3 @@ $on-desktop:       1024px;
         transform: rotate(7.5deg) scaleY(1.0); 
      } 
 }
-
-
-/* [data-aos^='zoom'][data-aos^='zoom'] {
-      opacity: 0;
-      transition-property: opacity, transform;
-
-      &.aos-animate {
-        opacity: 1;
-        transform: translate3d(0, 0, 0) scale(1);
-      }
-    }
-
-    [data-aos='zoom-in'] {
-      transform: scale(.6);
-    }
- */

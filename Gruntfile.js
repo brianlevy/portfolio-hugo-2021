@@ -1,7 +1,6 @@
 /* globals module, require */
 
-module.exports = function(grunt) {
-
+module.exports = function (grunt) {
   "use strict";
 
   grunt.initConfig({
@@ -10,111 +9,111 @@ module.exports = function(grunt) {
     uglify: {
       global: {
         files: {
-          "static/js/site.min.js": ["assets/js/site.js"]
-        }
-      }
+          "static/js/site.min.js": ["assets/js/site.js"],
+        },
+      },
     },
-
+ 
     sass: {
-      
       dist: {
         options: {
-          style: "compressed"
+          style: "compressed",
         },
         files: {
-          "assets/css/unprefixed/main-unprefixed-min.css": "assets/css/main.scss"
-        }
+          "assets/css/unprefixed/main-unprefixed-min.css":
+            "assets/css/main.scss",
+        },
       },
       global: {
         options: {
-          style: "expanded"
+          style: "expanded",
         },
         files: {
-          "assets/css/unprefixed/main-unprefixed.css": "assets/css/main.scss"
-        }
-      }
+          "assets/css/unprefixed/main-unprefixed.css": "assets/css/main.scss",
+        },
+      },
     },
 
     autoprefixer: {
       dist: {
         files: [
-        {src: ['assets/css/unprefixed/main-unprefixed-min.css'], dest: 'static/css/main-min.css'},
+          {
+            src: ["assets/css/unprefixed/main-unprefixed-min.css"],
+            dest: "static/css/main-min.css",
+          },
         ],
       },
       global: {
         src: "assets/css/unprefixed/main-unprefixed.css",
-        dest: "static/css/main.css"
-      }
+        dest: "static/css/main.css",
+      },
     },
 
     shell: {
       hugoServe: {
-        command: "hugo server"
+        command: "hugo server",
       },
       hugoBuild: {
-        command: "hugo"
-      }
+        command: "hugo",
+      },
     },
 
     watch: {
       options: {
-        livereload: true
+        livereload: true,
       },
       js: {
         files: ["assets/js/*.js"],
-        tasks: ["uglify"]
+        tasks: ["uglify"],
       },
       css: {
         files: ["assets/css/*.scss"],
-        tasks: ["sass", "autoprefixer", "shell:hugoBuild"]
+        tasks: ["sass", "autoprefixer", "shell:hugoBuild"],
       },
       svgIcons: {
         files: ["assets/svg/*.svg"],
-        tasks: ["svgstore"]
-      }
+        tasks: ["svgstore"],
+      },
     },
 
     svgstore: {
       options: {
-        prefix : "svg-",
+        prefix: "svg-",
         formatting: true,
         cleanup: false,
         includeTitleElement: false,
         svg: {
-          style: "display: none;"
-        }
+          style: "display: none;",
+        },
       },
       default: {
         files: {
-          "layouts/partials/svg-defs.svg": ["assets/svg/*.svg"]
-        }
-      }
+          "layouts/partials/svg-defs.svg": ["assets/svg/*.svg"],
+        },
+      },
     },
 
-    imagemin: {                           
+    imagemin: {
       dynamic: {
         options: {
-          optimizationLevel: 3
-        },                         
-        files: [{
-          expand: true,                  
-          cwd: 'assets/img/',                   
-          src: ['**/*.{png,jpg,gif}'],   
-          dest: 'static/img/'
-        }]
-      }
-    }
-    
-
-
+          optimizationLevel: 3,
+        },
+        files: [
+          {
+            expand: true,
+            cwd: "assets/img/",
+            src: ["**/*.{png,jpg,gif}"],
+            dest: "static/img/",
+          },
+        ],
+      },
+    },
   });
 
   require("load-grunt-tasks")(grunt);
-
-  //grunt.registerTask("imagemin", ["imagemin"]);
+  grunt.registerTask("images", ["imagemin"]);
   grunt.registerTask("serve", ["shell:hugoServe"]);
-  grunt.registerTask("build-assets", ["uglify", "sass", "autoprefixer", "svgstore", "watch"]);
-  grunt.registerTask("build", ["uglify", "sass", "autoprefixer", "svgstore", "shell:hugoBuild", "watch"]);
-  grunt.registerTask("default", ["uglify", "sass", "autoprefixer", "svgstore", "shell:hugoBuild", "shell:hugoServe", "watch"]);
-
+  grunt.registerTask("build-assets", ["uglify", "sass", "autoprefixer", "svgstore", "watch",]);
+  grunt.registerTask("build", ["uglify", "sass", "autoprefixer", "svgstore", "shell:hugoBuild", "watch",]);
+  grunt.registerTask("default", ["uglify", "sass", "autoprefixer", "svgstore", "shell:hugoBuild", "shell:hugoServe", "watch",]);
 };

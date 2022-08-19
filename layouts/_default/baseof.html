@@ -1,11 +1,7 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 <head>
-  <title>
-      {{ block "title" . }}
-        {{ .Site.Title }}
-      {{ end }}
-  </title>
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
   {{ partial "head.html" . }}
 </head>
 <body>
@@ -15,8 +11,8 @@
     <div class="inner-wrap">
     {{ partial "header.html" . }}
     <section class="content{{ if .Section }} {{ .Section }}-section{{ end }} {{ range .Params.categories }}{{ . }}-section{{ end }}">
-    {{ block "main" . }}
-    {{ end }}
+    {{ block "main" . -}}
+    {{ end -}}
     </section>
     </div>
   </div>

@@ -82,8 +82,6 @@ for-desktop-wide = 1600px up
 			margin-bottom: 1rem;
 		}
 		&:nth-child(even) {
-			.grid-item-content {
-			}
 			.grid-item-title {
 				width: 100%;
 				right: 0;
@@ -136,9 +134,6 @@ for-desktop-wide = 1600px up
 	.wrap {
 		/* width: 95%; */
 		margin: 4rem 2rem 1rem;
-		&:before, &:after {
-
-		}
 		&:before {
 			border-right: 1px solid #000000;
 			border-left: 1px solid #000000;
@@ -203,14 +198,8 @@ for-desktop-wide = 1600px up
 
 @media (min-width: 800px) {
 	h1.intro {
-		&.home {
-
-		}
 		.intro-text{
 			height: 2.4em;
-			span {
-
-			}
 		}
 	}
 	.subnav {
@@ -219,11 +208,6 @@ for-desktop-wide = 1600px up
 	.nameplate {
 		h1 {
 			display: block;
-		}
-	}
-	.content {
-		&.work-section {
-			/* margin-top: 2rem; */
 		}
 	}
 	
@@ -246,10 +230,6 @@ for-desktop-wide = 1600px up
 			}
 		}
 	}
-	h1.intro {
-		
-	}
-
 }
 
 @media (min-width: 960px) {
@@ -413,14 +393,6 @@ for-desktop-wide = 1600px up
 			}
 		}
 
-	}
-	.project-image {
-		/* &:nth-child(odd) {
-			flex-direction: row-reverse;
-			figcaption {
-				margin-left: 0 0 0 .75rem;
-			}
-		} */
 	}
 	.project-img-wrap {
 		max-width: 75%;
