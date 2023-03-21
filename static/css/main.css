@@ -228,14 +228,15 @@ a:hover {
 blockquote {
   margin-bottom: 0.5rem;
   color: #76706a;
-  font-size: 18px;
-  font-style: italic;
+  font-size: 20px;
+  font-style: normal;
   text-align: center;
 }
 blockquote p {
   margin: 0;
   width: 100%;
   color: #3c3642;
+  font-size: 20px;
   line-height: 110%;
 }
 blockquote p::before, blockquote p::after {

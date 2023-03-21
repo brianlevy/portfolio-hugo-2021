@@ -27,23 +27,23 @@ My experience has covered the full spectrum of design from research to productio
 
 > At the top of my list as a tough UX problem solver.
 
-*— Wende C.* Design Manager @ Microsoft
+— Design Manager @ Microsoft
 
 > A terrific designer and collaborator.
 
-*— Heidi K.* Content Strategist @ Allovus
+— Content Strategist @ Allovus
 
 > An absolutely essential part of our effort through his numerous design skills.
 
-*— Brody B.* Software Engineer @ Microsoft
+— Software Engineer @ Microsoft
 
 > Everything you'd want in a creative team member.
 
-*— Darcy B.* Manager @ Filter
+— Manager @ Filter
 
 > Thoughtful, thorough, and refreshingly logical.
 
-*— Carolyn G.* Manager @ Microsoft
+— Manager @ Microsoft
 
 {{< /section >}}
 {{< section class="resume" >}}

@@ -171,14 +171,15 @@ a {
 blockquote {
     margin-bottom: .5rem;
     color: $color-neutral;
-    font-size: 18px;
-    font-style: italic;
+    font-size: 20px;
+    font-style: normal;
     text-align: center;
     
     p {
         margin: 0;
         width: 100%;
         color: $text-color;
+        font-size: 20px;
         line-height: 110%;
         &::before, &::after {
             color: darken($grey-color, 7.5%);

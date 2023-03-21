@@ -1,0 +1,58 @@
+{{ $current := . }}
+{{ range .Site.Menus.nav }}
+  {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+  {{ $active = or $active (eq .Name $current.Title) }}
+  {{ $active = or $active (and (eq .Name "Work") (eq $current.Section "work")) }}
+  {{ $active = or $active (and (eq .Name "About") (eq $current.Section "about")) }}
+  <a href="{{ .URL }}" class="{{ if $active }}active{{ end }}">{{ .Name }}</a>
+{{ end }}
+
+<nav class="nav alt-3">
+	<ul>
+      {{ $currentNode := . -}}
+      {{ $rellink := $currentNode.RelPermalink -}} {{/* Finds top level directory */}}
+      {{ range .Site.Menus.main -}}
+        {{ $id := .Identifier -}}
+        {{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) (in $rellink $id) }}
+            <li class="{{ $id }} active animated">
+                <a href="{{ .URL }}" >
+                    {{ .Name }}
+                </a>
+            </li>
+        {{ else }}
+            <li class="{{ $id }} animated">
+                <a href="{{ .URL }}">
+                    {{ .Name }}
+                </a>
+            </li>
+        {{ end }} 
+      
+      {{- end }}
+	</ul>
+</nav>
+
+<nav class="subnav">
+	<ul>
+      {{ $currentNode := . }}
+      {{ $link := $currentNode.Permalink }}
+      {{ range .Site.Menus.sub }}
+      {{ $id := .Name }}     
+      {{if or ($currentNode.IsMenuCurrent "sub" .) ($currentNode.HasMenuCurrent "sub" .) }}
+      <li class="active animated"><span><em>{{ .Name | singularize}}</em> work</span></li> 
+      {{ else }}
+      <li>
+       <a class="{{ lower $id }}" href="{{ .URL }}" >
+            <span>{{ .Name }}</span>
+        </a>  
+      </li>
+      {{ end }}
+      {{ end }}
+    </ul>
+</nav>
+
+
+
+{{ $active = or $active (and (eq .Name "Hello") (eq $current.Section "/")) }}
+  {{ $active = or $active (and (eq .Name "Work") (in $current.Section "/work/")) }}
+  {{ $active = or $active (and (in .Identifier "work") (in $current.Section "/work/")) }}
+  {{ $active = or $active (and (eq .Name "About") (eq $current.Section "/about/")) }}

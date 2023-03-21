@@ -51,7 +51,7 @@ module.exports = function (grunt) {
 
     shell: {
       hugoServe: {
-        command: "hugo server",
+        command: "hugo server -p 8080",
       },
       hugoBuild: {
         command: "hugo",
