@@ -684,6 +684,16 @@ h2.recent {
 		color: $color-neutral;
 		mix-blend-mode: multiply;
 	}
+	&.post-it {
+		background-image: url(../img/projects/post-it-bg-2.jpg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-blend-mode: luminosity;
+		&::before {
+			background-color: #fbf8f7;
+		}
+		
+	}
 }
 .project-title {
 	text-align: center;

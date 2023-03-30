@@ -5,7 +5,7 @@ slug: santa cruz lighthouse print
 date: 
 weight: 6
 description:
-summary: A historic landmark in Nor Cal's iconic beach town.
+summary: An historic landmark in Nor Cal's iconic beach town.
 author: Brian Levy
 keywords: Santa Cruz, lighthouse, California, surfing, surf art, print, screen printing, screen print, orange, yellow, halftones, 
 draft:
@@ -63,5 +63,5 @@ Paper:
   {{< /figure >}}
   {{< figure >}}
   {{< fig-img src="print-santa-cruz-detail.jpg" class="img-round" alt="Santa Cruz Lighthouse print detail" >}}
-  {{< figure >}}
+  {{< /figure >}}
 {{< /img-gallery >}}

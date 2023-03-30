@@ -174,9 +174,11 @@ for-desktop-wide = 1600px up
 			}
 			&::before {
 				margin-right: .25em;
+				margin-bottom: 0;
 			}
 			&::after {
 				margin-left: .25em;
+				margin-top: 0;
 			}
 		}
 		p, ul, blockquote {
@@ -406,6 +408,12 @@ for-desktop-wide = 1600px up
 			}
 		}
 		blockquote p {
+			width: 100%;
+		}
+	}
+	.text-wrap {
+		width: calc((100% / 3) * 2);
+		p {
 			width: 100%;
 		}
 	}

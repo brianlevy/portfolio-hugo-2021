@@ -36,8 +36,12 @@ shopurl:
 featured: true
 ---
 {{< section class="overview" >}}
-  ## Problem ##
-  With so many subscription services out there, it's hard to keep track of it all. Subscriptions, memberships, and points plans have to be managed individually, making it difficult to see the big picture, understand what we're spending, and manage the details.
+  ## Overview ##
+  Bali was a project that emerged from Microsoft Research. It aimed to solve the way personal data is used in society – a vault for your personal data, enabling you to aggregate your data from multiple organizations and use it to your benefit. This project is a feature within the broader Bali application. 
+{{< /section >}}
+{{< section class="overview" >}}
+  ## Challenges and opportunities ##
+  With so many subscription services out there, it's hard to keep track of it all. Subscriptions, memberships, points plans, and trials have to be managed individually, making it difficult to see the big picture, understand what we're spending, and manage the details.
 {{< /section >}}
 
 {{< section class="overview" >}}

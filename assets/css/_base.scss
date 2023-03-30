@@ -239,3 +239,15 @@ hr {
 .center {
     text-align: center;
 }
+/*Utility*/
+.float-right {
+  float: right;
+  &.inline-media {
+    margin-left: 1.5rem;
+    margin-top: .5rem;
+  }
+}
+.inline-media {
+  width: 50%;
+  
+}
