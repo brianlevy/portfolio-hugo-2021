@@ -1,8 +1,28 @@
+@font-face {
+	font-family: 'Forza';
+	src: url('https://www.brian-levy.com/fonts/Forza-Black.eot');
+	src: local('Forza Black'), local('Forza-Black'),
+		url('https://www.brian-levy.com/fonts/Forza-Black.eot?#iefix') format('embedded-opentype'),
+		url('https://www.brian-levy.com/fonts/Forza-Black.woff') format('woff'),
+		url('https://www.brian-levy.com/fonts/Forza-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Forza Book';
+	src: url('https://www.brian-levy.com/fonts/Forza-Book.eot');
+	src: local('Forza Book'), local('Forza-Book'),
+		url('https://www.brian-levy.com/fonts/Forza-Book.eot?#iefix') format('embedded-opentype'),
+		url('https://www.brian-levy.com/fonts/Forza-Book.woff') format('woff'),
+		url('https://www.brian-levy.com/fonts/Forza-Book.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
 $base-font-family:    "futura-pt", Helvetica, Arial, sans-serif;
 
 $display-font-family:	"futura-pt-condensed", Helvetica, Arial, sans-serif; /* font-weight: 800 */
-$sans-bold-font-family:	"eurostile", "futura-pt-bold", Helvetica, Arial, sans-serif; /* font-weight: 700 */
-$sans-font-family:		"eurostile", "futura-pt", Helvetica, Arial, sans-serif; /* book = 400, extra bold = 800*/
+$sans-bold-font-family:	"Forza", "futura-pt-bold", Helvetica, Arial, sans-serif; /* font-weight: 700 */
+$sans-font-family:		"Forza Book", "futura-pt", Helvetica, Arial, sans-serif; /* book = 400, extra bold = 800*/
 $serif-font-family:		"ff-ernestine-pro", "clarendon-urw", Georgia, Times, serif;
 $logo-type-font:        "futura-pt", Helvetica, Arial, sans-serif;
 $monospace-font:        "Courier New", Courier, monospace;
